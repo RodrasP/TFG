@@ -1,0 +1,716 @@
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+/* Estilos personalizados para la barra de desplazamiento */
+/* Webkit */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+body {
+    margin: 0;
+    background-color: #dcf8ff;
+}
+
+p {
+    color: black;
+}
+
+/* Header*/
+header {
+    background-image: url('../imagenes/Banner.jpg');
+    background-size: cover;
+    background-position: center top 47em;
+    height: 253px;
+}
+
+header .header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 34px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+
+header .header-content h1 {
+    color: yellowgreen;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'MontserratRegular';
+}
+
+header .header-content p {
+    color: yellowgreen;
+    margin-top: -41px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'MontserratRegular';
+}
+
+/* Navegacion */
+
+nav {
+    background-color: black;
+    position: relative;
+    z-index: 10;
+}
+
+nav a {
+    color: yellowgreen;
+    font-family: 'MontserratRegular';
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+nav .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+nav .dropdown-content input {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav .dropdown-content input:hover {
+    background-color: #f1f1f1;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Formulario login/register */
+
+.login-form,
+.register-form {
+    max-width: 400px;
+    margin: 95px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'MontserratRegular';
+}
+
+
+.login-form h2,
+.register-form h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+.error-message {
+    display: none;
+    color: red;
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+
+/* Mapa */
+.contacto {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+
+}
+
+.contacto .mapa {
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 50%;
+}
+
+.contacto h1 {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'MontserratRegular';
+  
+}
+
+.contacto .referencias {
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.contacto .referencias .container {
+    border: 2px solid #ccc;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.contacto .referencias .container h3 {
+    margin-top: 0;
+}
+
+.contacto .referencias .container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contacto .referencias .container ul li {
+    margin-bottom: 10px;
+}
+
+
+.contacto .referencias .container ul li span {
+    font-family: 'MontserratRegular';
+    font-weight: bold;
+}
+
+.contacto .referencias .container ul li .texto {
+    font-family: 'MontserratRegular';
+    font-size: 14px;
+}
+
+
+/*Reservas */
+
+.listado-pistas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.listado-pistas .item {
+    width: 48%;
+}
+
+.listado-pistas .item .pista-tipo h2 {
+    text-transform: uppercase;
+    font-family: 'MontserratRegular';
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+.listado-pistas .item .pista-foto {
+    /* transform: rotate(90deg); */
+    /* margin-top: 14%; */
+    text-align: center;
+}
+
+.listado-pistas .item .pista-foto img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.listado-pistas .item .pista-foto img:hover::before {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.listado-pistas .item .boton-reserva {
+    text-align: center;
+}
+
+.listado-pistas .item .boton-reserva button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.listado-pistas .item .boton-reserva button:hover {
+    background-color: #3e8e41;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.listado-pistas .pista-2 .pista-foto img {
+    height: 407px;
+}
+
+
+/*Eleccion */
+
+.eleccion h1 {
+    text-align: center;
+    font-family: 'MontserratRegular';
+}
+
+.eleccion .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.eleccion .container .foto {
+    width: 48%;
+}
+
+.eleccion .container .foto img {
+    transform: rotate(90deg);
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.eleccion .container .formularios{
+    margin-top: 3%;
+}
+
+.eleccion .label-fecha,.label-horas {
+    font-family: 'MontserratRegular';
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.eleccion .input-fecha {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.eleccion .input-fecha:focus {
+    border-color: #0080ff;
+    outline: none;
+}
+
+
+.eleccion .hora-checkbox {
+    display: none;
+}
+
+.eleccion .hora-label {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.eleccion .hora-checkbox:checked+.hora-label {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.eleccion #hora-buttons{
+    margin-bottom: 10px;
+}
+
+.eleccion #submit-wrapper{
+    margin-top: 5%;
+}
+
+
+
+.eleccion form .reservas {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.eleccion .reservas:hover {
+    background-color: #3e8e41;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+/*Users */
+
+.users h1 {
+    text-align: center;
+    font-family: 'MontserratRegular';
+    font-size: 50px;
+}
+
+
+.users {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.users h1 {
+    text-align: center;
+    font-family: 'MontserratRegular';
+    font-size: 50px;
+}
+
+.users table {
+    border-collapse: collapse;
+    width: 82%;
+    margin: 80px;
+    font-family: 20px;
+    font-family: 'MontserratRegular';
+}
+
+.users thead th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.users tbody td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+
+.users tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.users table thead th:nth-of-type(6) {
+    width: 15%;
+}
+
+.users form {
+    margin-block-end: 0;
+}
+
+.users tbody form input {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.users input:hover {
+    background-color: #3e8e41;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/*Perfil */
+.perfil {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.perfil h1 {
+    text-align: center;
+    font-family: 'MontserratRegular';
+    font-size: 50px;
+}
+
+.perfil table {
+    border-collapse: collapse;
+    width: 82%;
+    margin: 80px;
+    font-family: 20px;
+    font-family: 'MontserratRegular';
+}
+
+.perfil thead th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.perfil tbody td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.perfil table thead th:nth-of-type(5) {
+    width: 15%;
+}
+
+.perfil tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.perfil form {
+    margin-block-end: 0;
+}
+
+.perfil tbody form input {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.perfil input:hover {
+    background-color: #3e8e41;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+/*Inicio */
+
+.inicio .catching {
+    display: flex;
+    margin-top: -7%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inicio .catching img {
+    margin: 50px;
+    height: 500px;
+}
+
+.inicio .catching .logo {
+    margin: 50px;
+    height: 500px;
+}
+
+.inicio .catching h1 {
+    margin-top: 8%;
+    font-family: 'MontserratRegular';
+}
+
+.inicio .catching h1 .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.inicio .catching h1 .texto .pregunta {
+    font-size: 54px;
+}
+
+
+.inicio .cuerpo {}
+
+
+
+/*Footer  */
+
+footer {
+    background-color: black;
+    font-size: 20px;
+    height: 228px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+
+footer .contacto-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
+    font-family: 'MontserratRegular';
+
+}
+
+footer .contacto-footer a {
+    color: white;
+    font-family: 'MontserratRegular';
+    text-decoration: none;
+
+}
+
+@media (max-width:1055px) {
+
+    footer {
+        justify-content: space-evenly;
+    }
+
+    footer .contacto-footer {
+        display: none;
+
+    }
+}
+
+footer .nombre {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 7.7%;
+}
+
+footer .nombre h1 {
+    color: yellowgreen;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'MontserratRegular';
+}
+
+footer .nombre p {
+    color: yellowgreen;
+    margin-top: -41px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'MontserratRegular';
+}
+
+@media (max-width:1200px) {
+    footer .nombre h1 {
+        font-size: 30px;
+    }
+
+    footer .nombre p {
+
+        margin-top: -23px;
+        font-size: 12px;
+
+    }
+}
+
+
+footer .navegacion {
+    display: flex;
+    align-items: center;
+}
+
+
+footer .navegacion li {
+    margin-bottom: 10px;
+}
