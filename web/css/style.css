@@ -478,7 +478,7 @@ input[type="submit"]:hover {
 
 @media (max-width:900px) {
     .eleccion .container .foto img {
-      
+
         width: 120%;
     }
 }
@@ -678,12 +678,12 @@ input[type="submit"]:hover {
     .perfil .mobile {
         display: block;
         list-style: none;
-        width: 100%;
+        padding: 0;
         font-family: 'MontserratRegular';
     }
 
-    .perfil .mobile li{
-      width: 100%;
+    .perfil .mobile li {
+        width: 100%;
     }
 
     .perfil .mobile .last {
