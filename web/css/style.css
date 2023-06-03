@@ -34,7 +34,6 @@ p {
 /* Header*/
 header {
     background-image: url('../imagenes/Banner.jpg');
-    background-size: cover;
     background-position: center top 47em;
     height: 253px;
 }
@@ -120,6 +119,23 @@ nav .dropdown:hover .dropdown-content {
 
 nav .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}
+
+@media (max-width:700px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .dropdown {
+        padding: 0;
+    }
+
+    nav a {
+
+        padding-left: unset;
+    }
 }
 
 /* Formulario login/register */
@@ -215,7 +231,7 @@ input[type="submit"]:hover {
     text-align: center;
     font-size: 50px;
     font-family: 'MontserratRegular';
-  
+
 }
 
 .contacto .referencias {
@@ -256,6 +272,13 @@ input[type="submit"]:hover {
     font-size: 14px;
 }
 
+@media (max-width:700px) {
+
+    .contacto .mapa {
+
+        width: 86%;
+    }
+}
 
 /*Reservas */
 
@@ -283,6 +306,11 @@ input[type="submit"]:hover {
     /* margin-top: 14%; */
     text-align: center;
 }
+
+.listado-pistas .item .pista-foto img {
+    width: 70%;
+}
+
 
 .listado-pistas .item .pista-foto img:hover {
     opacity: 0.5;
@@ -322,8 +350,20 @@ input[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
-.listado-pistas .pista-2 .pista-foto img {
-    height: 407px;
+
+@media (max-width:749px) {
+    .listado-pistas .item .pista-foto img {
+        width: 150% !important;
+        margin-left: -25%;
+    }
+
+}
+
+@media (max-width:900px) {
+    .listado-pistas .item .pista-foto img {
+        width: 90%;
+    }
+
 }
 
 
@@ -347,13 +387,17 @@ input[type="submit"]:hover {
     transform: rotate(90deg);
     margin-top: 150px;
     margin-bottom: 150px;
+    width: 85%;
 }
 
-.eleccion .container .formularios{
+.eleccion .container .formularios {
     margin-top: 3%;
+    position: absolute;
+    left: 60%;
 }
 
-.eleccion .label-fecha,.label-horas {
+.eleccion .label-fecha,
+.label-horas {
     font-family: 'MontserratRegular';
     display: inline-block;
     margin-bottom: 10px;
@@ -400,11 +444,11 @@ input[type="submit"]:hover {
     color: white;
 }
 
-.eleccion #hora-buttons{
+.eleccion #hora-buttons {
     margin-bottom: 10px;
 }
 
-.eleccion #submit-wrapper{
+.eleccion #submit-wrapper {
     margin-top: 5%;
 }
 
@@ -432,6 +476,13 @@ input[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
+@media (max-width:900px) {
+    .eleccion .container .foto img {
+      
+        width: 120%;
+    }
+}
+
 
 /*Users */
 
@@ -453,13 +504,14 @@ input[type="submit"]:hover {
     text-align: center;
     font-family: 'MontserratRegular';
     font-size: 50px;
+    width: 100%;
 }
 
 .users table {
     border-collapse: collapse;
     width: 82%;
     margin: 80px;
-    font-family: 20px;
+    font-size: 20px;
     font-family: 'MontserratRegular';
 }
 
@@ -511,6 +563,39 @@ input[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
+.users .mobile {
+    display: none;
+}
+
+@media (max-width:900px) {
+
+    .users h1 {
+        font-size: 30px;
+    }
+
+    .users .desktop {
+        display: none;
+    }
+
+    .users .mobile {
+        display: block;
+    }
+
+    .users ul {
+        list-style: none;
+    }
+
+    .users ul li {
+        font-family: 'MontserratRegular';
+
+    }
+
+    .users ul .last {
+
+        margin-bottom: 35px;
+    }
+}
+
 /*Perfil */
 .perfil {
     display: flex;
@@ -523,13 +608,14 @@ input[type="submit"]:hover {
     text-align: center;
     font-family: 'MontserratRegular';
     font-size: 50px;
+    width: 100%;
 }
 
 .perfil table {
     border-collapse: collapse;
     width: 82%;
     margin: 80px;
-    font-family: 20px;
+
     font-family: 'MontserratRegular';
 }
 
@@ -580,7 +666,36 @@ input[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
+.perfil .mobile {
+    display: none;
+}
 
+@media (max-width:900px) {
+    .perfil .desktop {
+        display: none;
+    }
+
+    .perfil .mobile {
+        display: block;
+        list-style: none;
+        width: 100%;
+        font-family: 'MontserratRegular';
+    }
+
+    .perfil .mobile li{
+      width: 100%;
+    }
+
+    .perfil .mobile .last {
+        margin-bottom: 35px;
+    }
+
+    .perfil h1 {
+
+        font-size: 30px;
+    }
+
+}
 
 
 
@@ -599,6 +714,8 @@ input[type="submit"]:hover {
     margin: 50px;
     height: 500px;
 }
+
+
 
 .inicio .catching .logo {
     margin: 50px;
@@ -622,9 +739,21 @@ input[type="submit"]:hover {
 }
 
 
-.inicio .cuerpo {}
+@media (max-width:700px) {
+    .inicio .catching img {
+        display: none;
+    }
 
+    .inicio .catching h1 .texto .pregunta {
+        text-align: center;
+        font-size: 30px !important;
+    }
 
+    .inicio .catching h1 .texto {
+        text-align: center;
+        font-size: 15px;
+    }
+}
 
 /*Footer  */
 

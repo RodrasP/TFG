@@ -19,7 +19,7 @@
 
   <h1>Lista De Usuarios</h1>
 
-  <table class="tabla-users">
+  <table class="tabla-users desktop">
     <thead>
       <tr>
 
@@ -53,6 +53,28 @@
       <?php endforeach ?>
     </tbody>
   </table>
+
+
+  <ul class="mobile">
+
+    <?php foreach ($listadoUsers as $key => $user) : ?>
+      <li>Id usuario: <?= $user['id_usuario'] ?></li>
+      <li>Nombre usuario: <?= $user['nombre_usuario'] ?></li>
+      <li>Fecha de creacion:<?= substr($user['fecha_creacion'], 0, 11) ?></li>
+      <li>Email: <?= $user['email'] ?></li>
+      <li>Rol:<?= $user['rol'] ?></li>
+      <li class="last">
+        <form method="POST" action="">
+          <input type="hidden" name="id_usuario" value="<?= $user['id_usuario'] ?>">
+          <input type="submit" value="Eliminar Usuario" name="ok"></button>
+        </form>
+
+      </li>
+
+
+    <?php endforeach ?>
+
+  </ul>
 
 
 </div>

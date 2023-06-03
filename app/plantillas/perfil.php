@@ -19,7 +19,7 @@
 
   <h1>Historial de reservas</h1>
 
-  <table class="tabla-reservas">
+  <table class="tabla-reservas desktop">
     <thead>
       <tr>
 
@@ -60,6 +60,38 @@
       <?php endforeach ?>
     </tbody>
   </table>
+
+  <ul class="tabla-reservas mobile">
+
+
+    <?php foreach ($listaReservas as $key => $reservas) : ?>
+      <?php if ($reservas['id_pista'] == 1 || $reservas['id_pista'] == 2) : ?>
+        <li>Tipo de pista: Dura</li>
+      <?php elseif ($reservas['id_pista'] == 3) : ?>
+        <li>Tipo de pista: Hierba</li>
+      <?php else : ?>
+        <li>Tipo de pista: Arcilla</li>
+      <?php endif ?>
+      <li>Fecha de reserva<?= $reservas['fecha_reserva'] ?></li>
+      <li>Hora <?= substr($reservas['hora_inicio'], 0, 5) ?></li>
+
+      <li class="last">
+        <?php if ($reservas['fecha_reserva'] >= date("Y-m-d")) : ?>
+          <form method="POST" action="">
+            <input type="hidden" name="id_reserva" value="<?= $reservas['id_reserva'] ?>">
+            <input type="submit" value="Cancelar Reserva" name="ok"></button>
+          </form>
+        <?php else : ?>
+          <button disabled>Cancelar Reserva</button>
+
+        <?php endif ?>
+      </li>
+
+
+    <?php endforeach ?>
+
+  </ul>
+
 
 
 </div>

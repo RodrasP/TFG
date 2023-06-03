@@ -116,7 +116,7 @@
     dropbtn.addEventListener('click', function() {
 
       window.location.replace('index.php?ctl=perfil');
-      console.log('gh');
+     
     });
   </script>
 </body>

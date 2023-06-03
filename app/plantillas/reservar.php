@@ -44,6 +44,7 @@
 </div>
 
 
+
 <script>
   const pistaFoto = document.querySelector('.pista-foto');
   const botonReserva = document.querySelector('.button');

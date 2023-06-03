@@ -21,7 +21,7 @@
 <form method="post" action="" class="register-form" onsubmit="return validarFormulario()">
   <div class="form-group">
     <label for="nombre">Nombre completo:</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo">
+    <input type="text" id="nombre" name="nombre" laceholder="Nombre Completo">
     <span id="nombre-error" class="error-message"></span>
   </div>
   <div class="form-group">
