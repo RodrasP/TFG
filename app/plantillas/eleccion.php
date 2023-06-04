@@ -47,27 +47,28 @@
 
 
 <script>
-  document.getElementById("fecha").addEventListener("change", function() { 
+  document.getElementById("fecha").addEventListener("change", function() {
     let fecha = this.value;
-    document.getElementById("hora-wrapper").style.display = "block"; 
-    var horaButtons = document.getElementById("hora-buttons"); 
-    var arrayFechas = <?= json_encode($listadoHoras); ?>; 
-
+    document.getElementById("hora-wrapper").style.display = "block";
+    var arrayFechas = <?= json_encode($listadoHoras); ?>;
 
     let arrayHoras = [];
-    for (let j = 0; j < arrayFechas.length; j++) { 
+    for (let j = 0; j < arrayFechas.length; j++) {
       element = arrayFechas[j];
       let nuevaFecha = element['fecha_reserva'];
-      if (nuevaFecha == fecha) { 
+      if (nuevaFecha == fecha) {
         arrayHoras.push(element['hora_inicio'].substring(0, 5));
       }
     }
 
-    for (var i = 10; i <= 21; i++) { //Creamos un for para crear los botones de seleccion de horas
-      var hora = i + ":00"; // damos formato a la hora
-      if (!arrayHoras.includes(hora)) { // si la hora no esta en el array de horas ya reservadas se creara un bton para dicha hora .
+    var horaButtons = document.getElementById("hora-buttons");
+    horaButtons.innerHTML = ""; // Vaciar el contenido actual antes de generar los nuevos botones
+
+    for (var i = 10; i <= 21; i++) {
+      var hora = i + ":00";
+      if (!arrayHoras.includes(hora)) {
         if (i >= 10 && i <= 21) {
-          var checkbox = document.createElement("input"); // creamos el boton
+          var checkbox = document.createElement("input");
           checkbox.type = "checkbox";
           checkbox.name = "hora-checkbox";
           checkbox.value = hora;
@@ -83,14 +84,14 @@
           label.className = "hora-label";
           label.innerHTML = hora;
 
-          horaButtons.appendChild(checkbox); // lo añadimso el div
+          horaButtons.appendChild(checkbox);
           horaButtons.appendChild(label);
         }
       }
     }
 
     var horaInputs = document.querySelectorAll(".hora-checkbox");
-    for (var i = 0; i < horaInputs.length; i++) { //recorremos los botones para ver cual esta seleccionado
+    for (var i = 0; i < horaInputs.length; i++) {
       horaInputs[i].addEventListener("click", function() {
         // Desmarcar todas las casillas excepto la seleccionada
         for (var j = 0; j < horaInputs.length; j++) {
@@ -108,7 +109,6 @@
         }
       });
     }
-
   });
 </script>
 
